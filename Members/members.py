@@ -1,7 +1,7 @@
 class Members:
     #constructor
     def __init__(self, id, prefix, firstName, lastName, SOS, money = 0):
-        #instance attributes
+        #instance attributess
         self.id = id
         self.prefix = prefix
         self.firstName = firstName
