@@ -1,7 +1,7 @@
 class Members:
     #constructor
     def __init__(self, id, prefix, firstName, lastName, SOS, money = 0):
-        #instance attributess
+        #instance attributessssssss
         self.id = id
         self.prefix = prefix
         self.firstName = firstName
@@ -10,4 +10,4 @@ class Members:
         self.money = money
         
     def deposit(self):
-        print("")
+        print("You have deposited" + self.money)
