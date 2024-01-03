@@ -11,3 +11,6 @@ class Members:
         
     def deposit(self):
         print("You have deposited" + self.money)
+        
+    def info(self):
+        print("Welcome" + self.firstName + self.lastName)
