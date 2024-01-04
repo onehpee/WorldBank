@@ -14,3 +14,6 @@ class Members:
         
     def info(self):
         print("Welcome" + self.firstName + self.lastName)
+        
+    def priv_info(self):
+        print("Account Info: " + self.id + self.firstName + self.lastName + self.SOS)
