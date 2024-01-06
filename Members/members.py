@@ -21,8 +21,8 @@ class Members:
     def deposit(self):
         print("You have deposited: " + self.money)
         
-    def info(self):
+    def accInfo(self):
         print("Welcome" + self.firstName + self.lastName)
         
-    def priv_info(self):
+    def accPriv_Info(self):
         print("Account Info: " + self.accNo + self.firstName + self.lastName + self.SOS)
