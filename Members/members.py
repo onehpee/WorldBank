@@ -1,6 +1,6 @@
 class Members:
     #constructor
-    def __init__(self, accNo, prefix, firstName, lastName, SOS, type,money = 0):
+    def __init__(self, accNo, prefix, firstName, lastName, SOS, type, balance = 0):
         #instance attributesssssssss
         self.accNo = accNo
         self.prefix = prefix
@@ -8,7 +8,7 @@ class Members:
         self.lastName = lastName
         self.SOS = SOS
         self.type = type
-        self.money = money
+        self.balance = balance
      
      
     def createAccount(self):
@@ -19,7 +19,7 @@ class Members:
         print("\n\n\nAccount Has Been Created")
 
     def deposit(self):
-        print("You have deposited: " + self.money)
+        print("You have deposited: " + self.balance)
         
     def accInfo(self):
         print("Welcome" + self.firstName + self.lastName)
