@@ -1,14 +1,13 @@
 import re
 class user:
     print("Welcome to World Bank Online")
-    def __init__(self, username, password, balance):
-        self.username = username
-        self.password = password
-        self.balance = balance
-    
-    def signIn(self):
+    def __init__(self, username, password):
         self.username = str(input("Please Enter Your Username: "))
         self.password = str(input("Please Enter Your Password: "))
+    
+    def accountID(self):
+        self.username = not yet
+        self.password = not yet
         
         
     def passLenCheck(self):
