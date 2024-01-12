@@ -11,7 +11,7 @@ class Bank(members):
         
     
 class Currency_convertor:
-    # empty dict to store the conversion rates
+    # empty dict to store the conversion ratess
     rates = {} 
     def __init__(self, url):
         data = requests.get(url).json()
