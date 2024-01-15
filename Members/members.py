@@ -43,7 +43,18 @@ class Members:
                 break
         
     def deposit(self):
-        print("You have deposited: " + self.balance)
+        amount = float(input(f"{self.firstName}, {self.lastName}, please enter how much you would like to deposit: "))
+        print("Thank you for depositing....")
+        self.balance += amount
+        return f"Your balance is now: {self.balance}"
+        
+    def withdraw(self):
+        amount = float(input(f"{self.firstName}, {self.lastName}, please enter how much you would like to withdraw: "))       
+        if self.balance < amount:
+            return "You don't have the funds to withdraw"
+        else:
+            print("Thank you for withdrawing...")
+            self.balance -= amount
         
     def accInfo(self):
         print("Welcome" + self.firstName + self.lastName)
