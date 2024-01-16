@@ -61,3 +61,12 @@ class Members:
         
     def accPriv_Info(self):
         print("Account Info: " + self.accNo + self.firstName + self.lastName + self.SOS)
+        
+        
+while True:
+    print("Welcome to the World Bank")
+    userFN = input("Enter Your First Name: ")
+    userLN = input("Enter Your Last Name: ")
+    userSOS = input("Enter Your Social Security Number: ")
+    userType = input("Enter The Type of Banking Account: ")
+    user = Members()

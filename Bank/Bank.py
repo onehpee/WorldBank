@@ -21,6 +21,9 @@ class Bank(members):
 
         output = cr.convert(from_currency, to_currency, amount)
 
-        print("The converted rate is:", output)         
+        print("The converted rate is:", output)   
         
+    
+    
+
     
