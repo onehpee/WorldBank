@@ -11,6 +11,8 @@ class Bank(members):
         self.member = members
         
     def converter(self):
+        cr = CurrencyRates()
+        
         amount = int(input("Please enter the amount you want to convert: "))
 
         from_currency = input("Please enter the currency code that has to be converted: ").upper()
