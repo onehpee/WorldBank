@@ -46,6 +46,9 @@ class Members:
         amount = float(input(f"{self.firstName}, {self.lastName}, please enter how much you would like to deposit: "))
         print("Thank you for depositing....")
         self.balance += amount
+        deposit_id = str(input("> Enter your Customer ID: "))
+        deposit_balance = str(input("> Enter the BALANCE to be deposit: "))
+        deposit_pass = str(input("> Enter your Password: "))
         return f"Your balance is now: {self.balance}"
         
     def withdraw(self):
@@ -70,3 +73,4 @@ while True:
     userSOS = input("Enter Your Social Security Number: ")
     userType = input("Enter The Type of Banking Account: ")
     user = Members()
+    new_user = input("Would you like to register a new user")
