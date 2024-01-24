@@ -52,7 +52,10 @@ class Members:
         return f"Your balance is now: {self.balance}"
         
     def withdraw(self):
-        amount = float(input(f"{self.firstName}, {self.lastName}, please enter how much you would like to withdraw: "))       
+        amount = float(input(f"{self.firstName}, {self.lastName}, please enter how much you would like to withdraw: "))  
+        withdrawal_id = str(input("> Enter your Customer ID: "))
+        withdrawal_balance = str(input("> Enter the BALANCE to be withdraw: "))
+        withdrawal_pass = str(input("> Enter your Password: "))     
         if self.balance < amount:
             return "You don't have the funds to withdraw"
         else:
