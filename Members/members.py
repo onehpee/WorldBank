@@ -4,7 +4,8 @@ from Bank import Bank
 
 class Members:
     #constructor
-    def __init__(self, accNo, prefix, firstName, lastName, SOS, type, balance = 0):
+    def __init__(self, accNo, prefix, firstName, lastName, SOS, type,
+                 PIN, balance = 0):
         #instance attributesssssssss
         self.accNo = accNo
         self.prefix = prefix
@@ -12,14 +13,17 @@ class Members:
         self.lastName = lastName
         self.SOS = SOS
         self.type = type
+        self.PIN = PIN
         self.balance = balance
      
      
     def createAccount(self):
         self.accNo = int(input("Enter the account No#: "))
-        self.firstName = input("Enter The Account Holder's First Name: ")
-        self.lastName = input("Enter The Account Holder's Last Name: ")
-        self.SOS = input("Enter The Account Holder's Social Security Number")
+        self.firstName = str(input("Enter The Account Holder's First Name: "))
+        self.lastName = str(input("Enter The Account Holder's Last Name: "))
+        self.SOS = int(input("Enter The Account Holder's Social Security Number"))
+        self.type = str(input("Pick an account you would like to create Checking or Saving"))
+        self.PIN = int(input("Create a 4-digit pin"))
         print("\n\n\nAccount Has Been Created")
         
     def passLenCheck(self):
@@ -43,19 +47,16 @@ class Members:
                 break
         
     def deposit(self):
-        amount = float(input(f"{self.firstName}, {self.lastName}, please enter how much you would like to deposit: "))
+        amount = float(input(f"{self.firstName}, {self.lastName}, Please enter how much you would like to deposit: "))
         print("Thank you for depositing....")
         self.balance += amount
-        deposit_id = str(input("> Enter your Customer ID: "))
-        deposit_balance = str(input("> Enter the BALANCE to be deposit: "))
-        deposit_pass = str(input("> Enter your Password: "))
+        PIN = int(input("> Enter your Pin: "))
         return f"Your balance is now: {self.balance}"
         
     def withdraw(self):
-        amount = float(input(f"{self.firstName}, {self.lastName}, please enter how much you would like to withdraw: "))  
-        withdrawal_id = str(input("> Enter your Customer ID: "))
-        withdrawal_balance = str(input("> Enter the BALANCE to be withdraw: "))
-        withdrawal_pass = str(input("> Enter your Password: "))     
+        amount = float(input(f"{self.firstName}, {self.lastName}, Please enter how much you would like to withdraw: "))
+        print("Thank you for withdrawing....") 
+        PIN = int(input("> Enter your Pin: "))     
         if self.balance < amount:
             return "You don't have the funds to withdraw"
         else:
