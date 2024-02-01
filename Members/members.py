@@ -18,13 +18,19 @@ class Members:
      
      
     def createAccount(self):
+        print("Create Your New Account")
+        print("--------------------------")
+        acco_info = open("acco_info.txt","a")
         self.accNo = int(input("Enter the account No#: "))
         self.firstName = str(input("Enter The Account Holder's First Name: "))
         self.lastName = str(input("Enter The Account Holder's Last Name: "))
+        address = str(input("Enter your address including country"))
         self.SOS = int(input("Enter The Account Holder's Social Security Number"))
         self.type = str(input("Pick an account you would like to create Checking or Saving"))
         self.PIN = int(input("Create a 4-digit pin"))
-        print("\n\n\nAccount Has Been Created")
+        acco_info.write(self.accNo + "," + self.firstName + "," + self.lastName + "," + address + "," + self.SOS + "," + self.type + "," + self.PIN)
+        acco_info.close()
+        print("\n\n\nAccount Has Been Created!")
         
     def passLenCheck(self):
         if len(self.password) >= 8:

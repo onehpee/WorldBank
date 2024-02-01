@@ -2,8 +2,8 @@ import re
 class app:
     print("Welcome to World Bank Online")
     def __init__(self, username, password):
-        self.username = str(input("Please Enter Your Username: "))
-        self.password = str(input("Please Enter Your Password: "))
+        self.username = username
+        self.password = password
         
     # def home():
     #     print("\n>> World Bank Home:")
@@ -24,13 +24,19 @@ class app:
     #     Task=int(input("Please select your option (1/2/3/4): "))
 
         
-    def create_account(self):
+    # def create_account(self):
         
-        credit_card_number = "400000" + format(randint(0000000000, 9999999999), '010d')
-        pin_number = format(randint(0000, 9999), '04d')
+    #     credit_card_number = "400000" + format(randint(0000000000, 9999999999), '010d')
+    #     pin_number = format(randint(0000, 9999), '04d')
 
-        self.card_numbers.append(credit_card_number)
-        self.pin_numbers.append(pin_number)
+    #     self.card_numbers.append(credit_card_number)
+    #     self.pin_numbers.append(pin_number)
+    
+    def login(self):
+        print("Welcome to the World Bank!! Please Login Below!")
+        self.username = str(input("Please Enter Your Username: "))
+        self.password = str(input("Please Enter Your Password: "))
+        
     
     def accountID(self):
         self.username = not yet
