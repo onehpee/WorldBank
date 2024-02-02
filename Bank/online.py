@@ -36,8 +36,13 @@ class app:
         print("Welcome to the World Bank!! Please Login Below!")
         self.username = str(input("Please Enter Your Username: "))
         self.password = str(input("Please Enter Your Password: "))
-        
-    
+        login_info = open("login_info.txt","f")
+        for line in login_info:
+            user = line.strip().split(",")
+        if (self.username == user[0] and self.password == user[4]):
+            print("\n\n=== WELCOME, ",user[1]," ===")
+            #menu
+            return True
     def accountID(self):
         self.username = not yet
         self.password = not yet
