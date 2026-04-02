@@ -1,5 +1,4 @@
 import re
-from Members import members
 class app:
     print("Welcome to World Bank Online")
     def __init__(self, username, password):
@@ -51,25 +50,25 @@ class app:
                 break
             
             
-    def home():
-        print("\n>> World Bank Home:")
-        print("1. Create New Profile\n2. Login\n3. Info\n4. Log Out")
-        Task=int(input("> Please select your option (1/2/3/4): "))
-        while(Task !='4'):
-            if (Task==1):
-                members.Members.createAccount()
-            elif(Task==2):
-                app.login()
-            elif(Task==3):
-                members.Members.accInfo
-            elif(Task==4):
-                print("=== GOOD BYE, SEE YOU AGAIN! ===\n\n")
-                app.home()
-            else:
-                print("!!! Invalid Option! Please read the option carefully! !!!\n")
-        Task=int(input("Please select your option (1/2/3/4): "))
+    # def home():
+    #     print("\n>> World Bank Home:")
+    #     print("1. Create New Profile\n2. Login\n3. Info\n4. Log Out")
+    #     Task=int(input("> Please select your option (1/2/3/4): "))
+    #     while(Task !='4'):
+    #         if (Task==1):
+    #             members.Members.createAccount()
+    #         elif(Task==2):
+    #             app.login()
+    #         elif(Task==3):
+    #             members.Members.accInfo
+    #         elif(Task==4):
+    #             print("=== GOOD BYE, SEE YOU AGAIN! ===\n\n")
+    #             app.home()
+    #         else:
+    #             print("!!! Invalid Option! Please read the option carefully! !!!\n")
+    #     Task=int(input("Please select your option (1/2/3/4): "))
 
         
         
-if __name__ == '__main__' :
-    u = user
+# if __name__ == '__main__' :
+#     u = user

@@ -1,12 +1,11 @@
 import re
-import math
-from Bank import Bank
+import Bank
 
 class Members:
     #constructor
     def __init__(self, accNo, prefix, firstName, lastName, SOS, type,
                  PIN, balance = 0):
-        #instance attributesssssssss
+        #instance attributes
         self.accNo = accNo
         self.prefix = prefix
         self.firstName = firstName
