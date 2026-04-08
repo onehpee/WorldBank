@@ -25,8 +25,8 @@ class app:
             #menu
             return True
     def accountID(self):
-        self.username = not yet
-        self.password = not yet
+        self.username
+        self.password 
         
         
     def passLenCheck(self):
