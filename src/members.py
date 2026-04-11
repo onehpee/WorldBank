@@ -1,5 +1,4 @@
 import re
-import Bank
 
 class Members:
     #constructor
