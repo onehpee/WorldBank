@@ -1,10 +1,11 @@
+from py_compile import main
 import re
 import math
 
 class Bank():
-    def __init__(self, country, currency):
-        self.country = country
-        self.currency = currency
+    def __init__(self):
+        self.username = None
+        self.password = None
         
     def members(self, accNo, prefix, firstName, lastName, SOS, type, PIN, balance = 0):
         self.accNo = accNo
@@ -27,7 +28,7 @@ class Bank():
         self.SOS = int(input("Enter The Account Holder's Social Security Number"))
         self.type = str(input("Pick an account you would like to create Checking or Saving"))
         self.PIN = int(input("Create a 4-digit pin"))
-        acco_info.write(self.accNo + "," + self.firstName + "," + self.lastName + "," + address + "," + self.SOS + "," + self.type + "," + self.PIN)
+        acco_info.write(str(self.accNo) + "," + str(self.firstName) + "," + str(self.lastName) + "," + str(address) + "," + str(self.SOS) + "," + str(self.type) + "," + str(self.PIN))
         acco_info.close()
         print("\n\n\nAccount Has Been Created!")
         
@@ -48,3 +49,15 @@ class Bank():
         }
         
         from_currency = country_to_currency.get(from_country)
+        if from_currency is None:
+            raise ValueError(f"Unsupported country: {from_country}")
+        
+        
+        
+        
+first_account = Bank()
+first_account.createAccount()
+    
+        
+if __name__ == "__main__":
+    main()
